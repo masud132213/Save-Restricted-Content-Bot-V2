@@ -161,7 +161,7 @@ async def run_batch(userbot, client, sender, countdown, link):
             await get_bulk_msg(userbot, client, sender, link, integer)
             protection = await client.send_message(sender, f"Sleeping for `{timer}` seconds to avoid Floodwaits and Protect account!")
             await countdown.edit(count_down, 
-                                 buttons=[[Button.url("Join Channel", url="https://t.me/devggn")]])
+                                 buttons=[[Button.url("Join Channel", url="https://t.me/saverestricted_BD")]])
             await asyncio.sleep(timer)
             await protection.delete()
         except IndexError as ie:
@@ -188,7 +188,7 @@ async def run_batch(userbot, client, sender, countdown, link):
             #logger.info(e)
             #await client.send_message(sender, f"An error occurred during cloning, batch will continue.\n\n**Error:** {str(e)}")
             if countdown.text != count_down:
-                await countdown.edit(count_down, buttons=[[Button.url("Join Channel", url="https://t.me/devggn")]])
+                await countdown.edit(count_down, buttons=[[Button.url("Join Channel", url="https://t.me/saverestricted_BD")]])
         n = i + 1
         if n == len(ids_data[str(sender)]):
             return -2
